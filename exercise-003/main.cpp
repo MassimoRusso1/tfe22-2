@@ -1,6 +1,7 @@
 #include <fmt/chrono.h>
 #include <fmt/format.h>
 
+#include "vectorint.hpp"
 
 auto main(int argc, char **argv) -> int
 {
@@ -11,7 +12,7 @@ auto main(int argc, char **argv) -> int
      */
     fmt::print("Hello, World!\n");
 
-    /* INSERT YOUR CODE HERE */
+    VectorInt v(10);
 
     return 0; /* exit gracefully*/
 }

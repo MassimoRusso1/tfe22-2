@@ -16,7 +16,7 @@ find_package(CLI11 CONFIG REQUIRED)
 find_package(Catch2 3 REQUIRED)
 
 # add the executable
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME} main.cpp vectorint.cpp)
 
 # Add libraries
 target_link_libraries(${PROJECT_NAME} PRIVATE
