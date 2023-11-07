@@ -12,8 +12,7 @@ auto main(int argc, char **argv) -> int
      */
     fmt::print("Hello, World!\n");
 
-    /* INSERT YOUR CODE HERE */
     VectorInt data(20);
-
+    
     return 0; /* exit gracefully*/
 }
