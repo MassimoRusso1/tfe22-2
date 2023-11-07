@@ -13,6 +13,27 @@ auto main(int argc, char **argv) -> int
     fmt::print("Hello, World!\n");
 
     VectorInt data(20);
+
+    // resize the vector to 10 elements
+    auto resize_value = 10;
+    auto prev_size = data.size();
+    fmt::print("Perform a resize from {} to {}\n",prev_size,resize_value);
+    data.resize(resize_value);
+    if(resize_value != data.size()) {
+        fmt::print("A size mismatch detected expected value {} actual value {}\n",resize_value,data.size());
+        return 1;
+    }
+    fmt::print("Performed a resize from {} to {}\n",prev_size,resize_value);
     
+    resize_value = 42;
+    prev_size = data.size();
+    fmt::print("Perform a resize from {} to {}\n",prev_size,resize_value);
+    prev_size = data.size();
+    data.resize(resize_value);
+    if(resize_value != data.size()) {
+        fmt::print("A size mismatch detected expected value {} actual value {}\n",resize_value,data.size());
+        return 1;
+    }
+    fmt::print("Performed a resize from {} to {}\n",prev_size,resize_value);
     return 0; /* exit gracefully*/
 }
