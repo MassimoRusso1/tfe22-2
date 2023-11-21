@@ -67,5 +67,28 @@ auto main(int argc, char **argv) -> int
         }
     }
     fmt::print("[success]\n");
+
+    // Testing the push_back method
+    fmt::print("Testing the push_back method by inserting elements ");
+    for (int i = 0; i < data.size(); i++)
+    {
+        data.push_back(value_to_insert);
+        if (value_to_insert != data.at(i))
+        {
+            fmt::print("[failure]\n");
+            fmt::print("Value missmatch! Expected {} received {}\n", value_to_insert, data.at(i));
+            return 1;
+        }
+    }
+    fmt::print("[success]\n");
+    data.print();
+
+    // resize and check values
+    fmt::print("Testing the push_back method by resizing after add ");
+    int* source = new int[10];
+    delete [] source;
+    source = nullptr;
+    data.print();
+
     return 0; /* exit gracefully*/
 }

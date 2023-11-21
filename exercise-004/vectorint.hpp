@@ -12,6 +12,7 @@ public:
     void resize( size_t count );
     void push_back( const int& value );
     void print();
+    void copy_dynamic_array(int* source, int* destination, int size);
 
 private:
     int m_size;
